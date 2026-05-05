@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload Medicine</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background: linear-gradient(135deg, #f8ffae, #43c6ac);
+background-size:400% 400%;
+animation: bgMove 12s ease infinite;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.box{
+background: rgba(255,255,255,0.7);
+backdrop-filter: blur(12px);
+padding:40px;
+border-radius:18px;
+width:380px;
+text-align:center;
+color:#2c3e50;
+box-shadow:0 10px 35px rgba(0,0,0,0.15);
+}
+
+h2{
+margin-bottom:10px;
+}
+
+p{
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#43c6ac;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+margin-top:10px;
+}
+
+button:hover{
+background:#2ecc71;
+transform:scale(1.05);
+}
+
+a{
+display:block;
+margin-top:15px;
+color:#2c3e50;
+text-decoration:none;
+font-size:14px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2> Upload Medicine</h2>
+<p>Scan & store medicine details using AI</p>
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+
+<input type="file" name="file" required>
+
+<input type="text" name="manual_name" placeholder="Enter Medicine Name (optional)">
+
+<input type="date" name="manual_expiry">
+
+<input type="number" name="stock" placeholder="Enter Stock Quantity" required>
+
+<button type="submit">Upload & Process</button>
+
+</form>
+
+<a href="/dashboard">Go to Dashboard</a>
+<a href="/logout">Logout</a>
+
+</div>
+
+</body>
+</html>
