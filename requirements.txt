@@ -1,0 +1,11 @@
+flask
+pymongo
+dnspython
+opencv-python
+easyocr
+torch
+torchvision
+numpy
+pillow
+python-dotenv
+gunicorn
